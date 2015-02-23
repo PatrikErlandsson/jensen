@@ -9,6 +9,7 @@ if(isset($_FILES['file'])){
     //when we upload, each file is sent to a temp location in ur server
     $tmp_name = $_FILES['file']['tmp_name'];
 }
+
 if(isset($_POST["teacherid"])){
 $teacherid = $_POST["teacherid"];
 
@@ -17,8 +18,8 @@ $teacherid = $_POST["teacherid"];
         if(!empty($name)){
             
             //move it from temporary file and append a place
-          if(!is_dir($location.$teacherid."/"))
-          {
+          if(!is_dir($location.$teacherid."/")) {
+              
               mkdir($location.$teacherid."/",777, true);
               chmod($location.$teacherid."/", 0777);
           } if(move_uploaded_file($tmp_name,$location.$teacherid."/".$name)){
@@ -44,7 +45,7 @@ $teacherid = $_POST["teacherid"];
      <br><br>
     <input type='file' name='file'><br><br>
     
-    <input type='submit' value='Skicka fil' class="submit" id = "send_file">
+    <input type='submit' value='Skicka fil' class="submit" id = "send_file"><br>
     
 </form> 
       

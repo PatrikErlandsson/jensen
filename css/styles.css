@@ -124,6 +124,10 @@ header h2 {
     margin-left: 10px;
 }
 
+header ul li ul li{
+    padding-right: 10px;
+}
+
 #user_welcome {
     color: #eba828;
 }
@@ -283,6 +287,10 @@ footer {
     color: #454545;
     clear:both;
     
+}
+
+footer a {
+    color: #2f4864;
 }
 
 /*FOOTER END***********/
